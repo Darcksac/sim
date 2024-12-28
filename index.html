@@ -38,12 +38,14 @@
             background: url('https://www.viasion.com/wp-content/uploads/2023/07/PCB-Tests-Inspections-1-800x-1300x800.jpg') no-repeat center/cover;
             height: 60vh;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             color: white;
             text-align: center;
             position: relative;
             z-index: 1;
+            padding: 10px 20px;
+            background-color: #333;
         }
         
         .header::after {
@@ -56,6 +58,7 @@
             background: rgba(0, 0, 0, 0.5); /* Apply opacity */
             z-index: 0;
         }
+        
         .header .overlay-image {
     position: absolute;
     top: 50%; 
@@ -63,6 +66,36 @@
     transform: translate(-50%, -50%); 
     z-index: 2;
     max-width: 200px; 
+}
+
+        @media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .overlay-image {
+    max-width: 100px;
+    margin-bottom: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar a {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
 }
 
         
